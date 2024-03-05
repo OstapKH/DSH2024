@@ -35,9 +35,12 @@ public class JugadorMovlv2 : MonoBehaviour
             if(puntos == 50){
             PlayerSpeed = PlayerSpeed * 1.04f;
             }
-            if (puntos == 100){
-                //?
+            if (puntos == 100 && SceneManager.GetActiveScene().name == "Level2"){
+                SceneManager.LoadScene("Level3");
             }
+            if(puntos == 100 && SceneManager.GetActiveScene().name == "Level3"){
+                SceneManager.LoadScene("Congratulations");  //?
+         }
     }
 
 
